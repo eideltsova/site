@@ -19,15 +19,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-height: 900px;
   width: 50%;
-  height: 50%;
   z-index: 1;
-  padding: 10rem 0;
+  padding: 5rem 0;
   flex: 1 1;
-  background-color: rebeccapurple;
-
-
 }
 
 .title {
@@ -35,8 +30,9 @@ body {
   justify-content: center;
   flex-direction: row;
   align-items: center;
-
-  padding: 0;
+  padding: 0px;
+  margin: 10px 0px;
+  font-size: 50px;
 }
 
 h1 {
@@ -60,7 +56,6 @@ a:hover {
 }
 
 .links {
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -70,7 +65,6 @@ a:hover {
 }
 
 ul {
-
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -85,6 +79,7 @@ li {
   flex-direction: row;
   align-items: center;
   margin: 0 25px 0 25px;
+  padding: 5px 5px;
 }
 
 img {
@@ -98,20 +93,27 @@ img {
   justify-content: center;
   align-items: center;
   font-family: Courier New, monospace;
-  font-size: 6px;
+  font-size: 10px;
 }
 
 
-@media only screen and (min-width: 320px) and (orientation: portrait) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  a {
+    font-size: 10px;
+  }
   .main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 50%;
-    height: 50%;
     z-index: 1;
-    padding: 10rem 0;
+    padding: 0;
     flex: 1 1;
+  }
+
+  .footer {
+    font-size: 6px;
   }
 
   .container {
@@ -125,6 +127,25 @@ img {
   .links {
     flex-direction: column;
   }
+
+  .title {
+    font-size: 20px;
+    margin: 30px 0px 0px;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-width: 404px) {
+  .title {
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 700px) {
+  .container {
+    flex-direction: row;
+  }
+
 }
 
 
